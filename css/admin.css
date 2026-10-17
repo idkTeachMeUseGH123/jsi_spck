@@ -1,0 +1,338 @@
+/* ── header tweaks ── */
+.admin-tag {
+    font-size: 13px;
+    font-weight: 500;
+    color: #1DB954;
+    border: 1px solid #1DB954;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+/* turn the nav <button> tabs into the same look as the <a> nav-links */
+#main-nav .admin-nav-link {
+    background: transparent;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+    padding: 6px 4px;
+    position: relative;
+}
+
+#main-nav .admin-nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -18px;
+    height: 3px;
+    background: #1DB954;
+}
+
+.header-icons a {
+    color: #b3b3b3;
+    text-decoration: none;
+}
+
+.header-icons a:hover {
+    color: #ffffff;
+}
+
+/* ── main content ── */
+#main-content.admin-content {
+    margin-top: 74px;
+    padding-top: 40px;
+}
+
+.admin-panel-header {
+    margin-bottom: 25px;
+}
+
+.admin-panel-header h3 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.admin-panel-header p {
+    color: #b3b3b3;
+    font-size: 14px;
+}
+
+/* ── buttons ── */
+.btn-admin-primary {
+    background: #1DB954;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.btn-admin-primary:hover {
+    background: #1ed760;
+}
+
+.btn-admin-secondary {
+    background: transparent;
+    border: 1px solid #444;
+    color: #ffffff;
+    padding: 11px 22px;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-admin-secondary:hover {
+    background: #282828;
+}
+
+/* ── table ── */
+.admin-table-wrap {
+    background: #181818;
+    border-radius: 12px;
+    padding: 10px 20px;
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table thead th {
+    text-align: left;
+    color: #b3b3b3;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 16px 12px;
+    border-bottom: 1px solid #282828;
+}
+
+.admin-table tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #242424;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.admin-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table-loading {
+    text-align: center;
+    color: #b3b3b3;
+    padding: 40px 0 !important;
+}
+
+.row-thumb {
+    width: 46px;
+    height: 46px;
+    border-radius: 6px;
+    object-fit: cover;
+    background: #282828;
+}
+
+.row-title {
+    font-weight: bold;
+}
+
+.row-sub {
+    color: #b3b3b3;
+    font-size: 13px;
+}
+
+.feedback-cell {
+    max-width: 240px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: default;
+}
+
+.row-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.icon-btn {
+    background: #282828;
+    border: none;
+    color: #b3b3b3;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.icon-btn:hover {
+    background: #333333;
+    color: #ffffff;
+}
+
+.icon-btn.danger:hover {
+    background: #e22134;
+    color: #ffffff;
+}
+
+.role-select {
+    background: #282828;
+    color: #ffffff;
+    border: 1px solid #383838;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.empty-state {
+    text-align: center;
+    color: #b3b3b3;
+    padding: 50px 0;
+    font-size: 15px;
+}
+
+.empty-state i {
+    display: block;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+/* ── modal (chỉ còn modal add/edit) ── */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay.show {
+    display: flex;
+}
+
+.admin-modal {
+    background: #181818;
+    width: 480px;
+    max-width: 90vw;
+    max-height: 88vh;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.admin-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid #282828;
+}
+
+.admin-modal-header h3 {
+    font-size: 18px;
+}
+
+.modal-close {
+    background: transparent;
+    border: none;
+    color: #b3b3b3;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: #ffffff;
+}
+
+.admin-modal-body {
+    padding: 22px 24px;
+    overflow-y: auto;
+}
+
+.form-row {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-row.two-col {
+    flex-direction: row;
+    gap: 16px;
+}
+
+.form-row.two-col > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-row label {
+    font-size: 13px;
+    color: #b3b3b3;
+    font-weight: 600;
+}
+
+.form-row input,
+.form-row textarea {
+    background: #282828;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 11px 14px;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+    border-color: #1DB954;
+}
+
+.admin-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+/* ── responsive ── */
+@media (max-width: 900px) {
+    #main-header {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    #main-nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .search-area input {
+        width: 180px;
+    }
+
+    #main-content.admin-content {
+        padding: 30px 20px 40px;
+    }
+}
