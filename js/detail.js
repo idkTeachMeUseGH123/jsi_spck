@@ -1,4 +1,3 @@
-// Lấy id từ URL: detail.html?id=xxxx
 const params = new URLSearchParams(location.search);
 const productId = params.get("id");
 let product = null;
@@ -159,7 +158,6 @@ function renderDetail() {
     }
 }
 
-// Chuyển mọi dạng link YouTube sang link embed
 function toYoutubeEmbed(link) {
     if (!link) return "";
     try {
@@ -178,7 +176,6 @@ function toYoutubeEmbed(link) {
     }
 }
 
-// Đổi icon play <-> pause
 function updatePlayIcon() {
     const icon = document.getElementById("play-icon");
     if (!icon) return;
@@ -187,7 +184,6 @@ function updatePlayIcon() {
     icon.classList.toggle("fa-pause", isPlaying);
 }
 
-// Mở popup video YouTube
 function openVideoPopup(embed) {
     closeVideoPopup();
 
